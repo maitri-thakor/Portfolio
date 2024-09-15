@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Navbar Styles */
+nav {
+  background: #f39c12;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .navbar-brand {
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+nav .navbar-brand i {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: max-height 0.3s ease-out;
+}
+
+nav .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: #333;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+/* Responsive Menu Styles */
+nav .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+nav .nav-links.active {
+  max-height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  nav .menu-toggle {
+    display: block;
+  }
+}
+/* Button Styles */
+.hero-text .btn,
+.project-card .btn,
+.skill-card .btn,
+.modal-links a {
+  background: #f39c12; /* Match with the navbar color */
+  color: white;
+  padding: 8px 16px; /* Adjust padding if needed */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-text .btn:hover,
+.project-card .btn:hover,
+.skill-card .btn:hover,
+.modal-links a:hover {
+  background: #e67e22; /* Slightly darker shade for hover */
+}
+
+/* Section Titles and Other Highlights */
+h2::after {
+  background-color: #e67e22; /* Adjusted to complement the new navbar color */
+}
+
+/* Theme Switcher */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switcher label {
+  margin-left: 5px;
+  color: white;
+}
+
+/* Video Background Styles */
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Adjust the height of the video section */
+#hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero-text {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 2;
+  max-width: 80%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-text .btn {
+  background: #f39c12;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-text .btn:hover {
+  background: #e67e22;
+}
+
+@media screen and (max-width: 768px) {
+  #hero {
+    height: 50vh;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text .btn {
+    padding: 6px 12px;
+  }
+}
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section Styles */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background-color: #f39c12;
+  display: block;
+  margin: 10px auto 0;
+}
+
+/* About Section */
+/* About Section Styles */
+.about-section {
+  background-color: #fefefe;
+  padding: 80px 20px; /* Increased padding for more height */
+  margin-top: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the title for the About Me section */
+.about-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.about-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #f39c12;
+  display: block;
+  margin: 10px auto 0;
+}
+
+/* About Content Layout */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 60%;
+  text-align: justify;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 300px; /* Increased max width to make the image section larger */
+  height: auto;
+  max-height: 400px; /* Adjusted max height to increase the image size */
+  border-radius: 12px; /* Square format with rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow to the image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Transition for hover effect */
+}
+
+/* Hover Effect on Image */
+.about-image img:hover {
+  transform: scale(1.05); /* Slightly scale the image on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+  border: 4px solid #f39c12; /* Add border on hover */
+}
+
+.about-icon {
+  color: #f39c12; /* Icon color */
+  margin-right: 15px; /* Add more space between the icon and text */
+  font-size: 1.5rem; /* Adjust icon size */
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text,
+  .about-image {
+    max-width: 100%;
+  }
+
+  .about-image img {
+    margin-bottom: 20px;
+  }
+}
+
+/* Projects Section */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+body.dark-mode .project-card {
+  background-color: #444;
+  color: #f4f4f4;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.project-icon {
+  font-size: 3rem;
+  color: #f39c12;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.project-card .btn {
+  background: #f39c12;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project-card .btn:hover {
+  background: #e67e22;
+}
+
+/* #Project Left and :right */
+/* Project Carousel */
+.project-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Hide overflow to create the carousel effect */
+}
+
+/* Project Grid Styles */
+.project-grid {
+  display: flex;
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  gap: 20px; /* Space between project cards */
+  padding: 20px; /* Add padding to the project container */
+}
+/* Hide scrollbar */
+.project-grid::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.project-grid {
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
+}
+
+.project-card {
+  flex: 0 0 300px; /* Fixed width for each card */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Carousel Button Styles */
+.carousel-btn {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Align middle */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* Ensure buttons are above other content */
+}
+
+/* Adjusted Left Arrow Positioning */
+.left-btn {
+  left: 15px; /* Create more space on the left */
+}
+
+/* Adjusted Right Arrow Positioning */
+.right-btn {
+  right: 15px; /* Create more space on the right */
+}
+
+/* Hover Effect for Buttons */
+.carousel-btn:hover {
+  background-color: #e67e22;
+}
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+body.dark-mode .skill-card {
+  background-color: #444;
+  color: #f4f4f4;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  color: #f39c12;
+  margin-bottom: 15px;
+}
+
+.skill-card h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.skill-card .btn {
+  background: #f39c12;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.skill-card .btn:hover {
+  background: #e67e22;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content Styling */
+.modal-content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 700px;
+  text-align: left; /* Ensure left alignment for paragraphs */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Center the title and add some margin */
+.modal-content h3 {
+  text-align: center; /* Center align the title */
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 1.8rem; /* Adjust font size if needed */
+}
+
+/* Ensure the image is centered and responsive */
+.modal-content img {
+  display: block;
+  margin: 0 auto 20px; /* Center the image and add space below */
+  max-width: 100%; /* Ensure the image does not overflow */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Add rounded corners if desired */
+}
+
+/* Style the paragraphs inside the modal */
+.modal-content p {
+  margin-bottom: 15px; /* Space between paragraphs */
+  line-height: 1.6; /* Improve readability */
+  color: #333; /* Ensure text color contrasts with the background */
+}
+
+/* Style for the Detail View button */
+.modal-content .btn {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0; /* Center the button and add margin */
+  background-color: #f39c12; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.modal-content .btn:hover {
+  background-color: #e67e22; /* Change color on hover */
+}
+
+/* Ensure checkmark and text are aligned */
+.modal-content p::before {
+  /* content: '✅ '; */
+  /* Add checkmark before the paragraph */
+  display: inline-block;
+  margin-right: 8px; /* Space between the checkmark and text */
+}
+
+body.dark-mode .modal-content {
+  background-color: #444;
+  color: #f4f4f4;
+}
+
+.modal-content.show {
+  transform: translateY(0);
+}
+
+.close-btn {
+  color: #333;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+body.dark-mode .close-btn {
+  color: #f4f4f4;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #f39c12;
+}
+
+.project-screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.modal-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.modal-links a {
+  background: #f39c12;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+.modal-links a:hover {
+  background: #e67e22;
+}
+
+/* Contact Section */
+#contact {
+  padding: 60px 20px;
+  background-color: #333; /* Black background color */
+  text-align: center;
+  color: #f4f4f4; /* Light text color for better contrast */
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f4f4f4; /* Light text color */
+}
+
+#contact p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #f4f4f4; /* Light text color */
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #f4f4f4; /* Light icon color */
+  margin: 0 15px;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f39c12; /* Highlight color on hover */
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background-color: #333; /* Black background color */
+  color: #f4f4f4; /* Light text color */
+  text-align: center;
+  font-size: 1rem;
+  border-top: 1px solid #f4f4f4; /* Add a line to separate contact and footer */
+  margin-top: 20px; /* Add some space above the line */
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 768px) {
+  .social-icons a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+  }
+}

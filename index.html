@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maitri Thakor - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <!--
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="container">
+        <a href="#hero" class="navbar-brand">
+          <i class="fas fa-laptop-code"></i>
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications-skills">Certifications & Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="theme-switcher">
+          <input type="checkbox" id="theme-toggle" />
+          <label for="theme-toggle">Dark Mode</label>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <video autoplay muted loop playsinline id="background-video">
+        <source src="Images/Home.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <h1>Hello, I'm Maitri Thakor</h1>
+          <p>A Full-Stack Developer based in Wellington, New Zealand</p>
+          <a href="#projects" class="btn">View My Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- About Section -->
+    <section id="about" class="container about-section">
+      <h2 class="about-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            <i class="fas fa-user about-icon"></i>
+            I'm Maitri Thakor, a passionate Full-Stack Developer based in
+            Wellington, New Zealand. I recently graduated with an NZQA Level 6
+            Certificate in Applied Software Development from Dev Academy
+            Aotearoa, where I completed an intensive 15-week program that honed
+            my skills in both front-end and back-end technologies.
+          </p>
+          <p>
+            <i class="fas fa-laptop-code about-icon"></i>
+            My technical expertise includes HTML, CSS, JavaScript, ASP.NET, C#,
+            and frameworks such as React.js and Node.js. I am proficient in SQL,
+            including SQLite and SQL Server. I am skilled in UI/UX design using
+            tools like DaisyUI, Tailwind CSS, Canva, and Figma. I truly enjoy
+            finding solutions and consider myself a problem-solving person who
+            thrives in a team environment.
+          </p>
+          <p>
+            <i class="fas fa-graduation-cap about-icon"></i>
+            I am committed to continuous learning and am currently preparing for
+            the AWS Cloud Practitioner certification. I have been working on
+            various AWS services like S3, EC2, RDS, IAM, QuickSight, and Lex to
+            enhance my understanding. Additionally, I am learning Python and
+            developing my full-stack applications to address real-world
+            problems.
+          </p>
+          <p>
+            <i class="fas fa-mountain about-icon"></i>
+            Outside of coding, I enjoy exploring the outdoors, engaging in
+            photography, and practicing meditation, which helps me maintain
+            focus and clarity in my work. I am always open to new challenges and
+            opportunities to collaborate on impactful projects.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="Images/Maitri-Thakor.JPG" alt="Maitri Thakor" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+      <h2>My Projects</h2>
+
+      <div class="project-carousel">
+        <!-- Left Arrow -->
+        <button class="carousel-btn left-btn" onclick="moveProjects('left')">
+          &#10094;
+        </button>
+
+        <!-- Project Grid -->
+        <div class="project-grid" id="projectGrid">
+          <div class="project-card">
+            <i class="fas fa-laptop-code project-icon"></i>
+            <h3>Re-Solve</h3>
+            <p>
+              Find Your Solution – Your Destination for Better Code Practices.
+            </p>
+            <a href="#" class="btn open-modal" data-modal="taskModal"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card">
+            <i class="fas fa-laptop-code project-icon"></i>
+            <h3>Kes-Ke-Say</h3>
+            <p>Kes-Ke-Say is a French-focused social media website.</p>
+            <a href="#" class="btn open-modal" data-modal="ecommerceModal"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card">
+            <i class="fas fa-laptop-code project-icon"></i>
+            <h3>Todo-Full-Stack</h3>
+            <p>This is my first full-stack project—a dynamic Todo List.</p>
+            <a href="#" class="btn open-modal" data-modal="portfolioModal"
+              >View Project</a
+            >
+          </div>
+
+          <div class="project-card">
+            <i class="fas fa-laptop-code project-icon"></i>
+            <h3>Amazon S3</h3>
+            <p>Host a website on Amazon S3</p>
+            <a href="#" class="btn open-modal" data-modal="AmazonS3Modal"
+              >View Project</a
+            >
+          </div>
+
+          <div class="project-card">
+            <i class="fas fa-laptop-code project-icon"></i>
+            <h3>Amazon QuickSight</h3>
+            <p>Amazon QuickSight to visualize Netflix’s catalogue trends</p>
+            <a href="#" class="btn open-modal" data-modal="AmazonQuickSight"
+              >View Project</a
+            >
+          </div>
+
+          <div class="project-card">
+            <i class="fas fa-laptop-code project-icon"></i>
+            <h3>Amazon Lex</h3>
+            <p>Build a Chatbot with AmazonLex</p>
+            <a href="#" class="btn open-modal" data-modal="AmazonLex"
+              >View Project</a
+            >
+          </div>
+          <!-- Add more project cards as needed -->
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="carousel-btn right-btn" onclick="moveProjects('right')">
+          &#10095;
+        </button>
+      </div>
+    </section>
+
+    <!-- Modals for Projects -->
+    <div id="taskModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Re-Solve - Find Your Solution</h3>
+        <img
+          src="Images/Final-project-Re-Solve.png"
+          alt="Re-Solve - Find Your Solution"
+          class="project-screenshot"
+        />
+        <p>
+          Welcome to Re:Solve – Your Destination for Better Code Practices. This
+          project showcases the use of modern web technologies, including HTML,
+          CSS, JavaScript, TypeScript, Knex, Express, React.js, and Node.js.
+        </p>
+        <div class="modal-links">
+          <a
+            href="https://github.com/maitri-thakor/Re-Solve"
+            class="btn"
+            target="_blank"
+            >View on GitHub</a
+          >
+          <a href="https://re-solve.pushed.nz/" class="btn" target="_blank"
+            >Live Demo</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="ecommerceModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Kes-Ke-Say</h3>
+        <img
+          src="Images/Kes-Ke-Say.png"
+          alt="Kes-Ke-Say"
+          class="project-screenshot"
+        />
+        <p>
+          Kes-Ke-Say is a French-focused social media website. My partner and I
+          were assigned all tasks related to 'Groups'.
+        </p>
+        <div class="modal-links">
+          <a
+            href="https://github.com/maitri-thakor/Kes-Ke-Say"
+            class="btn"
+            target="_blank"
+            >View on GitHub</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="portfolioModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Todo-Full-Stack</h3>
+        <img
+          src="Images/ToDo-List.png"
+          alt="Todo-Full-Stack"
+          class="project-screenshot"
+        />
+        <p>
+          This is my first full-stack project — a dynamic Todo List. It allows
+          users to add, edit, and delete tasks.
+        </p>
+        <div class="modal-links">
+          <a
+            href="https://github.com/maitri-thakor/todo-full-stack"
+            class="btn"
+            target="_blank"
+            >View on GitHub</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="AmazonS3Modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Amazon S3</h3>
+        <img
+          src="Images/Amazon s3.png"
+          alt="Amazon S3"
+          class="project-screenshot"
+        />
+        <p>
+          In this project, ✅ I Created and configured an Amazon S3 bucket,
+          complete with ACLs, versioning, and public access.
+        </p>
+        <p>
+          ✅ Uploaded website content, diving deep into how static websites
+          function and how to host them on S3.
+        </p>
+        <p>
+          ✅ Tackled public access settings and fixed an interesting challenge
+          with the website's visibility.
+        </p>
+
+        <div class="modal-links">
+          <a
+            href="https://drive.google.com/file/d/1GartWTnjcskwEdCpvqHtu7aMwaIU5wOX/view"
+            class="btn"
+            target="_blank"
+          >
+            Detail View</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="AmazonQuickSight" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Amazon QuickSight</h3>
+        <img
+          src="Images/AmazonQuicsight.png"
+          alt="Amazon-QuickSight"
+          class="project-screenshot"
+        />
+        <p>
+          𝗜 𝘂𝘀𝗲𝗱 𝗔𝗺𝗮𝘇𝗼𝗻 𝗤𝘂𝗶𝗰𝗸𝗦𝗶𝗴𝗵𝘁 𝘁𝗼 𝘃𝗶𝘀𝘂𝗮𝗹𝗶𝘇𝗲 𝗡𝗲𝘁𝗳𝗹𝗶𝘅’𝘀 𝗰𝗮𝘁𝗮𝗹𝗼𝗴𝘂𝗲 𝘁𝗿𝗲𝗻𝗱𝘀 📊
+        </p>
+
+        <p>🔍 𝗞𝗲𝘆 𝗧𝗮𝗸𝗲𝗮𝘄𝗮𝘆𝘀 𝗳𝗿𝗼𝗺 𝘁𝗵𝗶𝘀 𝗔𝗪𝗦 𝗽𝗿𝗼𝗷𝗲𝗰𝘁:</p>
+
+        <p>• ✅ UPLOAD and store datasets in Amazon S3.</p>
+        <p>• 🔗 CONNECT datasets to Amazon QuickSight for analysis.</p>
+        <p>
+          • 📊 CREATE visualizations like donut charts, bar graphs, and tables.
+        </p>
+        <p>• ❓ ANSWER complex data questions using QuickSight’s tools.</p>
+
+        <div class="modal-links">
+          <a
+            href="https://drive.google.com/file/d/1NjjmWnnKitV3mlksuls0BqzdSR57NOfu/view"
+            class="btn"
+            target="_blank"
+          >
+            Detail View</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="AmazonLex" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Amazon Lex</h3>
+        <img
+          src="Images/AmazonLex.png"
+          alt="Amazon-Lex"
+          class="project-screenshot"
+        />
+        <p>
+          I’ve started building a banking chatbot using Amazon Lex! Here's what
+          I did:
+        </p>
+        <p>
+          🤖 Set up a chatbot from scratch with Amazon Lex. There are lots of
+          options to customise it like choosing your chatbot's voice! 🗣️
+        </p>
+
+        <p>
+          💬 Created a way for my chatbot to welcome users, loaded with
+          greetings like 'Hi' and 'Can you help me?'
+        </p>
+
+        <p>
+          🤚 Configured a fallback mechanism that offers helpful prompts if my
+          bot fails to understand the user.
+        </p>
+
+        <p>
+          📸 Check out my documentation to see my process and conversations with
+          my chatbot!
+        </p>
+
+        <p>
+          🌟 In the next phase of this project, I'm creating custom slots to
+          handle different bank account types... excited to make BankerBot
+          smarter and more interactive! 🚀👀
+        </p>
+
+        <div class="modal-links">
+          <a
+            href="https://drive.google.com/file/d/1aOJgga0DL9OvZpBiayeNL9_qc4sfdDVj/view"
+            class="btn"
+            target="_blank"
+          >
+            Detail View</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications & Skills Section -->
+    <section id="certifications-skills" class="container">
+      <h2>Certifications & Skills</h2>
+      <div class="skills-grid">
+        <!-- Certificate Section -->
+        <div class="skill-card">
+          <i class="fas fa-certificate skill-icon"></i>
+          <h3>Certificates</h3>
+          <p>Click to view details.</p>
+          <a href="#" class="btn open-modal" data-modal="certificatesModal"
+            >View Certificates</a
+          >
+        </div>
+
+        <!-- Technical Skills Section -->
+        <div class="skill-card">
+          <i class="fas fa-laptop-code skill-icon"></i>
+          <h3>Technical Skills</h3>
+          <p>Click to view details.</p>
+          <a href="#" class="btn open-modal" data-modal="technicalSkillsModal"
+            >View Technical Skills</a
+          >
+        </div>
+
+        <!-- Core Skills Section -->
+        <div class="skill-card">
+          <i class="fas fa-lightbulb skill-icon"></i>
+          <h3>Core Skills</h3>
+          <p>Click to view details.</p>
+          <a href="#" class="btn open-modal" data-modal="coreSkillsModal"
+            >View Core Skills</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Certificates -->
+    <div id="certificatesModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Certificates</h3>
+        <ul>
+          <li>AWS Cloud Practitioner (In Progress)</li>
+          <li>SQL (Basic) - HackerRank(Aug-2024)</li>
+          <li>Problem Solving (Basic) - HackerRank(Aug-2024)</li>
+          <li>Python (Basic) - HackerRank(Sep-2024)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Modal for Technical Skills -->
+    <div id="technicalSkillsModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>
+            Languages & Frameworks: HTML, CSS, JavaScript, TypeScript, ASP.NET,
+            C#, React.js, Node.js, Express.js, Knex.js
+          </li>
+          <li>
+            Database Management: SQL (SQLite, SQL Server) and relational
+            database systems
+          </li>
+          <li>
+            API Development & Libraries: REST APIs, Superagent, ReactQuery,
+            Auth0
+          </li>
+          <li>
+            Development Tools & Platforms: VS Code, GitHub, Dokku Deployment,
+            Test-Driven Development (TDD) using Vitest
+          </li>
+          <li>UI/UX Design: DaisyUI, Tailwind CSS, Canva, Figma</li>
+          <li>
+            Development Methodologies: Agile frameworks (Scrum, Kanban),
+            Waterfall methodology, Pair Programming
+          </li>
+          <li>
+            Collaboration & Project Management Tools: Miro Board and Jira for
+            team collaboration and project management
+          </li>
+          <li>Cloud: AWS Cloud Practitioner (Preparing for certification)</li>
+          <li>
+            Cloud Technologies: Knowledge of AWS (S3, EC2, RDS, IAM, QuickSight,
+            Lex – Learning more)
+          </li>
+          <li>
+            Microsoft 365: Word, Excel, PowerPoint, Outlook, SharePoint,
+            OneDrive for Business, Microsoft Teams, Planner
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Modal for Core Skills -->
+    <div id="coreSkillsModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Core Skills</h3>
+        <ul>
+          <li>Problem-solving</li>
+          <li>Critical thinking</li>
+          <li>Analytical Skills</li>
+          <li>Willingness to learn and adapt</li>
+          <li>Team Work</li>
+          <li>Motivating and inspiring</li>
+          <li>Great time management</li>
+          <li>Good communication</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+      <h2>Contact Me</h2>
+      <p>
+        Feel free to reach out if you're looking for a developer, have a
+        question, or just want to connect.
+      </p>
+      <div class="social-icons">
+        <a href="mailto:maitrithakor@gmail.com" class="contact-icon"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/maitri-thakor/"
+          class="contact-icon"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Maitri-Thakor" class="contact-icon"
+          ><i class="fab fa-github"></i
+        ></a>
+        <!-- GitHub Icon -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 Maitri Thakor. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+          })
+        })
+      })
+
+      // Modal Interaction
+      const modals = document.querySelectorAll('.modal')
+      const openModalButtons = document.querySelectorAll('.open-modal')
+      const closeButtons = document.querySelectorAll('.close-btn')
+
+      openModalButtons.forEach((button) => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault()
+          const modalId = this.dataset.modal
+          const modal = document.getElementById(modalId)
+          modal.style.display = 'flex'
+          modal.querySelector('.modal-content').classList.add('show') // Add the 'show' class here
+        })
+      })
+
+      closeButtons.forEach((button) => {
+        button.addEventListener('click', function () {
+          const modal = this.closest('.modal')
+          modal.style.display = 'none'
+          modal.querySelector('.modal-content').classList.remove('show') // Remove the 'show' class here
+        })
+      })
+
+      window.addEventListener('click', function (e) {
+        if (e.target.classList.contains('modal')) {
+          e.target.style.display = 'none'
+        }
+      })
+
+      // Theme Switcher
+      const toggleSwitch = document.getElementById('theme-toggle')
+      if (toggleSwitch) {
+        toggleSwitch.addEventListener('change', function () {
+          document.body.classList.toggle('dark-mode')
+        })
+      }
+
+      // Project Carousel Scrolling
+      function moveProjects(direction) {
+        const projectGrid = document.getElementById('projectGrid')
+        const scrollAmount = 300 // Adjust the scroll amount as needed
+
+        if (direction === 'left') {
+          projectGrid.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth',
+          })
+        } else if (direction === 'right') {
+          projectGrid.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth',
+          })
+        }
+      }
+
+      // Get the video element
+      const video = document.getElementById('background-video')
+
+      // Set the playback rate (0.5 is half speed, 1 is normal speed, 2 is double speed, etc.)
+      video.playbackRate = 0.4 // Adjust the value to make the video slower or faster
+    </script>
+  </body>
+</html>
